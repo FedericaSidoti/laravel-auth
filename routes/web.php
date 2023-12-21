@@ -29,7 +29,7 @@ Route::middleware('auth', 'verified')->prefix('admin')->name('admin.')->group(fu
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-    Route::resource('projects', ProjectController::class);
+    Route::resource('/projects', ProjectController::class);
 });
 
 require __DIR__.'/auth.php';

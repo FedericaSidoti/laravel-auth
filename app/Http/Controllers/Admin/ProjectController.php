@@ -11,14 +11,14 @@ class ProjectController extends Controller
     public function index()
     {
 
-        // $characters = Character::all()->sortBy('level');
+        $projects = Project::all();
 
-        // return view('characters.index', compact('characters'));
+        return view('admin.projects.index', compact('projects'));
     }
 
     public function show(Project $project)
     {
-        // return view('characters.show', compact('character'));
+        return view('admin.projects.show', compact('project'));
     }
 
     public function create()

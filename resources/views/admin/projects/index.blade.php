@@ -3,12 +3,12 @@
 @section('content')
 <div class="container">
     <h2 class="fs-4 text-secondary my-4">
-        {{ __('Dashboard') }}
+        
     </h2>
     <div class="row justify-content-center">
         <div class="col">
             <div class="card">
-                <div class="card-header">{{ __('User Dashboard') }}</div>
+                <div class="card-header"></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -24,12 +24,19 @@
     </div>
 
     <div class="row p-5">
+        @forelse ($projects as $project)
         <div class="col-3">
             <div class="card border-primary">
-                <h2>  <a href={{route('admin.projects.index')}}>vai alla Lista</a></h2>
-                <h2> <a>Crea Nuovo</a> </h2>
+                <img src="{{$project->thumb}}">
+                <h2>{{$project->title}}</h2>
+                <p>{{$project->description}}</p>
+
+                <button class="btn btn-primary"><a href="{{route('admin.projects.show', $project->id)}}">Scopri di più</a></button>
             </div>
         </div>
+        @empty
+            <h2>Non ci sono progetti da mostrare!</h2>
+        @endforelse
     </div>
 
     
