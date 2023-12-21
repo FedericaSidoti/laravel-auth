@@ -27,7 +27,7 @@
         <div class="col-3">
             <div class="card border-primary">
                 <h2>  <a href={{route('admin.projects.index')}}>vai alla Lista</a></h2>
-                <h2> <a>Crea Nuovo</a> </h2>
+                <h2> <button class="btn btn-primary"><a href="{{route('admin.projects.create')}}">Crea Nuovo</a></button> </h2>
             </div>
         </div>
     </div>
