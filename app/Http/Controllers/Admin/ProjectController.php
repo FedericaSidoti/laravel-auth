@@ -32,6 +32,12 @@ class ProjectController extends Controller
     {
         $data = $request->all();
 
+        $request->validate([
+            'title' => 'required|max:255|',
+            'thumb' => 'required|url',
+            'description' => 'required'
+        ]);
+
         $newProject = Project::create($data);
 
         return redirect()->route('admin.projects.index');
@@ -53,6 +59,7 @@ class ProjectController extends Controller
             'thumb' => 'required|url',
             'description' => 'required'
         ]);
+
         $project->update($data);
 
         return redirect()->route('admin.projects.show', $project->id);
