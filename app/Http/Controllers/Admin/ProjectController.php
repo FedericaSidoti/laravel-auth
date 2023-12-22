@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Project;
+use Illuminate\Validation\Rule;
 
 class ProjectController extends Controller
 {
@@ -37,6 +38,7 @@ class ProjectController extends Controller
     }
 
     public function edit(Project $project)
+
     {
 
         return view('admin.projects.edit', compact('project'));
@@ -45,6 +47,12 @@ class ProjectController extends Controller
     public function update(Request $request, Project $project)
     {
         $data = $request->all();
+
+        $request->validate([
+            'title' => 'required|max:255|',
+            'thumb' => 'required|url',
+            'description' => 'required'
+        ]);
         $project->update($data);
 
         return redirect()->route('admin.projects.show', $project->id);
