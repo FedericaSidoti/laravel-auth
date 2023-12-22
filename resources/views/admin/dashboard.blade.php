@@ -8,13 +8,17 @@
     <div class="row justify-content-center">
         <div class="col">
             <div class="card">
-                <div class="card-header">{{ __('User Dashboard') }}</div>
+                <div class="card-header">{{ __('Admin Dashboard') }}</div>
 
                 <div class="card-body">
-                    <div class="row p-5">
+                    <div class="row justify-content-center p-5">
                         <div class="col-3 d-flex p-1">
                             <div class=" border border-warning p-2">
-                                <h2>  <a href={{route('admin.projects.index')}}>vai alla Lista</a></h2>
+                                <a href={{route('admin.projects.index')}}>
+                                    <h5>Vai alla Lista </h5>
+                                    <h5>Modifica Progetto </h5>
+                                    <h5>Elimina Progetto </h5>
+                                </a>
                             </div>
                         </div>
                         <div class="col-3 d-flex p-1">
