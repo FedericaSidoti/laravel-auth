@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <h2 class="fs-4 text-secondary my-4">
-        
+        Tutti i Progetti
     </h2>
     <div class="row justify-content-center">
         <div class="col">
@@ -24,7 +24,7 @@
     </div>
 
     <div class="row p-5">
-        @forelse ($projects as $project)
+    @forelse ($projects as $project)
         <div class="modal fade" id="modal-{{$project->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -59,9 +59,9 @@
                 
             </div>
         </div>
-        @empty
-            <h2>Non ci sono progetti da mostrare!</h2>
-        @endforelse
+    @empty
+        <h2>Non ci sono progetti da mostrare!</h2>
+    @endforelse
     </div>
 
     

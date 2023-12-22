@@ -21,7 +21,7 @@
             
         @endforelse
             
-            <p>Non ci sono ancora progetti visualizzabili!</p>
+            
         </div>
     
         <button class="btn btn-primary"><a href="{{route('admin.dashboard')}}">Vai alla Admin Table </a></button>
