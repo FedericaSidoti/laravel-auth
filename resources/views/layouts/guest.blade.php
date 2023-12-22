@@ -15,18 +15,21 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans text-gray-900 antialiased">
-        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
-            <div>
-                <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-                </a>
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <div class="logo">
+                            <img src="{{Vite::asset('public\code-school-logo_5f3eb01d9eefd.png')}}">
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{url('/') }}">{{ __('Home Utente') }}</a>
+                    </li>
+                </ul>
             </div>
+        </nav>
 
-            @yield('content')
-
-            <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-                {{ $slot }}
-            </div>
-        </div>
+        @yield('content')
     </body>
 </html>

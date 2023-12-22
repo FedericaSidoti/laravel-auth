@@ -11,6 +11,18 @@
                 <div class="card-header">{{ __('User Dashboard') }}</div>
 
                 <div class="card-body">
+                    <div class="row p-5">
+                        <div class="col-3 d-flex p-1">
+                            <div class=" border border-warning p-2">
+                                <h2>  <a href={{route('admin.projects.index')}}>vai alla Lista</a></h2>
+                            </div>
+                        </div>
+                        <div class="col-3 d-flex p-1">
+                            <div class="border border-warning p-2">
+                                <h2> <a href="{{route('admin.projects.create')}}">Crea Nuovo</a></h2>
+                            </div>
+                        </div>
+                    </div>
                     @if (session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}
@@ -23,14 +35,7 @@
         </div>
     </div>
 
-    <div class="row p-5">
-        <div class="col-3">
-            <div class="card border-primary">
-                <h2>  <a href={{route('admin.projects.index')}}>vai alla Lista</a></h2>
-                <h2> <button class="btn btn-primary"><a href="{{route('admin.projects.create')}}">Crea Nuovo</a></button> </h2>
-            </div>
-        </div>
-    </div>
+    
 
     
 </div>

@@ -29,11 +29,11 @@ class ProjectController extends Controller
 
     public function store(Request $request)
     {
-        // $data = $request->all();
+        $data = $request->all();
 
-        // $newCharacter = Character::create($data);
+        $newProject = Project::create($data);
 
-        // return redirect()->route('characters.index');
+        return redirect()->route('admin.projects.index');
     }
 
     public function edit(Project $project)

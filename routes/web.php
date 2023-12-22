@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Models\Project;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +18,10 @@ use App\Http\Controllers\Admin\ProjectController;
 */
 
 Route::get('/', function () {
-    return view('home');
+    
+    $projects= Project::all();
+
+    return view('home', compact('projects'));
 });
 
 
