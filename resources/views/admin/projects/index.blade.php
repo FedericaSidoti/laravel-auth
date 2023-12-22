@@ -31,7 +31,8 @@
                 <h2>{{$project->title}}</h2>
                 <p>{{$project->description}}</p>
 
-                <button class="btn btn-primary"><a href="{{route('admin.projects.show', $project->id)}}">Scopri di più</a></button>
+                <button class="btn btn-primary"><a href="{{route('admin.projects.show', $project->id)}}">Dettagli</a></button>
+                <button class="btn btn-primary"><a href="{{route('admin.projects.edit', $project->id)}}">Modifica</a></button>
             </div>
         </div>
         @empty
