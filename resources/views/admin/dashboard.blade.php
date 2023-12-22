@@ -22,6 +22,13 @@
                                 <h2> <a href="{{route('admin.projects.create')}}">Crea Nuovo</a></h2>
                             </div>
                         </div>
+
+                        <div class="col-3 d-flex p-1">
+                            <div class="border border-warning p-2">
+                                <h2> <a href="{{ route('register') }}">Registra Admin</a></h2>
+                            </div>
+                        </div>
+
                     </div>
                     @if (session('status'))
                     <div class="alert alert-success" role="alert">

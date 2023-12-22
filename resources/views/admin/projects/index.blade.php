@@ -30,9 +30,11 @@
                 <img src="{{$project->thumb}}">
                 <h2>{{$project->title}}</h2>
                 <p>{{$project->description}}</p>
-
-                <button class="btn btn-primary"><a href="{{route('admin.projects.show', $project->id)}}">Dettagli</a></button>
-                <button class="btn btn-primary"><a href="{{route('admin.projects.edit', $project->id)}}">Modifica</a></button>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-primary"><a href="{{route('admin.projects.show', $project->id)}}">Dettagli</a></button>
+                    <button class="btn btn-primary"><a href="{{route('admin.projects.edit', $project->id)}}">Modifica</a></button>
+                </div>
+                
             </div>
         </div>
         @empty
