@@ -23,7 +23,7 @@
     <div id="app">
 
 
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
                     <div class="logo">
@@ -89,12 +89,12 @@
                 </div>
             </div>
         </nav>
-        <div class="w-100 d-flex justify-content-around">
+        <div class="info-header">
             <p>Stai visualizzando i progetti di : ***** </p>
             <button>About Me</button>
         </div>
 
-        <main class="bg-light mb-5">
+        <main class="bg-dark mb-5">
             @yield('content')
         </main>
     </div>

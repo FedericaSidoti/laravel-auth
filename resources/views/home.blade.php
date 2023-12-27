@@ -7,7 +7,7 @@
 @section('content')
 
     <div class="container">
-        <h1 class="p-5">Homepage</h1>
+        <h1 class="p-5 text-light">Homepage</h1>
         <div class="row">
         @forelse ($projects as $project)
         <div class="col-4">
