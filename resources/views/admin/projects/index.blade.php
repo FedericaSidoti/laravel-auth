@@ -26,7 +26,7 @@
 
     <div class="row p-5">
         <table class="table table-striped">
-            <thead class="table-primary">
+            <thead class="table-info">
                 <tr class="text-center">
                     <th scope="col">#</th>
                     <th scope="col">IMG</th>
@@ -50,7 +50,7 @@
                                 <h3>Vuoi davvero eliminare {{$project->title}}?</h3>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Annulla</button>
+                                <button type="button" class="btn btn-info" data-bs-dismiss="modal">Annulla</button>
                                 <form action="{{route('admin.projects.destroy', $project->id)}}" method="POST">
                                     @csrf
                                     @method('DELETE')
@@ -76,8 +76,8 @@
                     </td>
                     <td>
                         <div class="d-flex justify-content-around py-4">
-                            <button class="btn btn-primary"><a href="{{route('admin.projects.show', $project->id)}}">Dettagli</a></button>
-                            <button class="btn btn-primary"><a href="{{route('admin.projects.edit', $project->id)}}">Modifica</a></button>
+                            <button class="btn btn-info"><a href="{{route('admin.projects.show', $project->id)}}">Dettagli</a></button>
+                            <button class="btn btn-info"><a href="{{route('admin.projects.edit', $project->id)}}">Modifica</a></button>
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-{{$project->id}}">Elimina</button>
                         </div>
                     </td>

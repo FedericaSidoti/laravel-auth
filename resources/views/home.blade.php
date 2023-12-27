@@ -10,7 +10,7 @@
         <h1 class="p-5 text-light">Homepage</h1>
         <div class="row">
         @forelse ($projects as $project)
-        <div class="col-4">
+        <div class="col-4 mb-4">
             <div class="card">
                 <h2>{{$project->title}}</h2>
                 <img src="{{$project->thumb}}">
@@ -18,13 +18,11 @@
             </div>
         </div>
         @empty
-            
+            <h2> Non ci sono progetti da mostrare!</h2>
         @endforelse
-            
-            
         </div>
     
-        <button class="btn btn-primary"><a href="{{route('admin.dashboard')}}">Vai alla Admin Table </a></button>
+        <button class="btn btn-info mb-3"><a href="{{route('admin.dashboard')}}">Vai alla Admin Table </a></button>
     </div>
 
 

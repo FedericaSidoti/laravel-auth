@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <div class="row justify-content-center p-5">
                         <div class="col-3 d-flex p-1">
-                            <button class=" btn btn-warning">
+                            <button class=" btn btn-info">
                                 <a href={{route('admin.projects.index')}}>
                                     <h5>Vai alla Lista </h5>
                                     <h5>Modifica Progetto </h5>
@@ -22,13 +22,13 @@
                             </button>
                         </div>
                         <div class="col-3 d-flex p-1">
-                            <button class=" btn btn-warning">
+                            <button class=" btn btn-info">
                                 <h2> <a href="{{route('admin.projects.create')}}">Crea Nuovo</a></h2>
                             </button>
                         </div>
 
                         <div class="col-3 d-flex p-1">
-                            <button class=" btn btn-warning">
+                            <button class=" btn btn-info">
                                 <h2> <a href="{{ route('register') }}">Registra Admin</a></h2>
                             </button>
                         </div>
