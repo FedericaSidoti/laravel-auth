@@ -36,10 +36,7 @@ a {
     justify-content: space-around;
     align-items: center;
     padding: 10px 0; 
-    background-color: #31D2F2;
-    // background-image: url(texture-header.png);
-    // background-repeat: repeat;
-    // background-size: cover;
+    background: linear-gradient(#31D2F2, grey);
         p {
             margin: 0; 
         }
