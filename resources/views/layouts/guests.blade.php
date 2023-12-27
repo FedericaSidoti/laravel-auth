@@ -24,6 +24,9 @@
                     <img src="{{Vite::asset('public\code-school-logo_5f3eb01d9eefd.png')}}">
                 </div>
                 {{-- config('app.name', 'Laravel') --}}
+                <div class="logo-text">
+                    <p class="fs-3">MyProjects</p>
+                </div>
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -45,8 +48,12 @@
             </div>
         </div>
     </nav>
+    <div class="info-header">
+        <p class="text-light">Stai visualizzando i progetti di : ***** </p>
+        <button>About Me</button>
+    </div>
 
-    <main class="bg-light">
+    <main class="bg-light mb-5">
         @yield('content')
     </main>
 
